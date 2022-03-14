@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dynamic-user-form/static/css/main.a8306e6b.css",
+    "main.js": "/dynamic-user-form/static/js/main.9ac4714e.js",
+    "index.html": "/dynamic-user-form/index.html",
+    "main.a8306e6b.css.map": "/dynamic-user-form/static/css/main.a8306e6b.css.map",
+    "main.9ac4714e.js.map": "/dynamic-user-form/static/js/main.9ac4714e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8306e6b.css",
+    "static/js/main.9ac4714e.js"
+  ]
+}
