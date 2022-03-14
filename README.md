@@ -1,2 +1,2 @@
 # dyanmic-user-form
-Dynaimc User form created using React.
+Dynamic User form created using React.
