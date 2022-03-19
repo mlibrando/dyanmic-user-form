@@ -84,7 +84,20 @@ function UserForm() {
   };
 
   const renderFields = () => {
-    let ret = '';
+    let ret = (
+      <div>
+        <div className="flex justify-center my-4">
+          <Typography variant="body2" color="error">
+            If no content is being loaded below, this is likely a CORS issue.
+            Try opening this page in another browser like Opera and see if that fixes the issue.
+          </Typography>
+        </div>
+        <div className="flex justify-center">
+          <CircularProgress />
+        </div>
+
+      </div>
+    );
     if (FormUtils.isFormDataValid() && !_.isEmpty(value)) {
       const randomString = fieldData[3].fieldName;
       const { [randomString]: randomStringValue } = value;
