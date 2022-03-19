@@ -90,7 +90,7 @@ function UserForm() {
       const { [randomString]: randomStringValue } = value;
       ret = (
         <div className="m-8">
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
             <div>
               <TextField
                 disabled={isProcessing}
@@ -120,7 +120,7 @@ function UserForm() {
             </div>
 
           </div>
-          <div className="grid grid-cols-4 gap-4 mb-4">
+          <div className="grid sm:grid-cols-4 gap-4 mb-4">
             <div>
               <TextField
                 disabled={isProcessing}
