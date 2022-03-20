@@ -11,22 +11,27 @@ import { useSelector } from 'react-redux';
 
 const _ = require('lodash');
 
+function renderData(data) {
+  const objectKeys = Object.keys(data);
+  const objectRenderMap = Object.keys(data).map((element, index) => (
+
+    <div key={element}>
+      {objectKeys[index]}
+      {' '}
+      :
+      {' '}
+      {data[element]}
+    </div>
+  ));
+  return objectRenderMap;
+}
+
 function ResponseList() {
   const createdFormData = useSelector((newFormData));
 
   const renderCreatedFormData = () => {
     let ret = '';
     if (!_.isEmpty(createdFormData)) {
-      const createdDataKeys = Object.keys(createdFormData);
-      const createdData = Object.keys(createdFormData).map((element, index) => (
-        <div key={element}>
-          {createdDataKeys[index]}
-          {' '}
-          :
-          {' '}
-          {createdFormData[element]}
-        </div>
-      ));
       ret = (
         <div className="p-4 m-8">
           <Typography
@@ -34,7 +39,21 @@ function ResponseList() {
           >
             Response
           </Typography>
-          {createdData}
+          {`name: ${createdFormData.name}`}
+          <br />
+          {`username: ${createdFormData.username}`}
+          <br />
+          {`email: ${createdFormData.email}`}
+          <br />
+          {`phone: ${createdFormData.phone}`}
+          <br />
+          <br />
+          Address
+          {renderData(createdFormData.address)}
+          <br />
+          <br />
+          Company
+          {renderData(createdFormData.company)}
         </div>
       );
     }

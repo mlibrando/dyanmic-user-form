@@ -3,7 +3,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import FormApiCall from '../../app/main/apps/utils/form/formApiCall';
 
-const _ = require('lodash');
+// const _ = require('lodash');
 
 const initialState = {
   forms: {},
@@ -34,10 +34,10 @@ export const formSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getUserForm.fulfilled, (state, action) => {
-        state.forms = _.keyBy(action.payload.data, 'fieldName');
+        state.forms = action.payload;
       })
       .addCase(addUserForm.fulfilled, (state, action) => {
-        state.newForm = action.payload.data;
+        state.newForm = action.payload;
       });
   },
 });

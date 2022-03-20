@@ -4,7 +4,7 @@ import axios from 'axios';
 
 class FormApiCall {
   getForm = () => {
-    const formApi = `${process.env.REACT_APP_FORM_API_URL}/form`;
+    const formApi = `${process.env.REACT_APP_FORM_API_URL}/1`;
     return new Promise((resolve, reject) => {
       axios.get(formApi).then((response) => {
         resolve(response.data);
@@ -15,7 +15,7 @@ class FormApiCall {
   };
 
   postForm = (data) => {
-    const formApi = `${process.env.REACT_APP_FORM_API_URL}/form`;
+    const formApi = `${process.env.REACT_APP_FORM_API_URL}`;
     return new Promise((resolve, reject) => {
       axios.post(formApi, data).then((response) => {
         resolve(response.data);
